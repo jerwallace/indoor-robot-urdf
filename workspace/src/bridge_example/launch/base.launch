@@ -2,6 +2,6 @@
 <launch>
 
     <include file="$(find robot_gazebo)/launch/gazebo.launch" />
-    <node name="lidar_print" pkg="bridge_example" type="lidar_print" />
+    <include file="$(find robot_navigation)/launch/gmapping_demo.launch" />
 
 </launch>
