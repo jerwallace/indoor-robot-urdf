@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>bridge_example</name>
+  <version>0.0.1</version>
+  <description>
+    Package for bridging LiDAR 
+  </description>
+  <license>MIT-0</license>
+  <author email="ros-contributions@amazon.com">AWS RoboMaker</author>
+  <maintainer email="ros-contributions@amazon.com">AWS RoboMaker</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+
+</package>

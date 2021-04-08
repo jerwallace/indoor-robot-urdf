@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find robot_gazebo)/launch/gazebo.launch" />
+    <node name="lidar_print" pkg="bridge_example" type="lidar_print" />
+
+</launch>
