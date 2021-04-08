@@ -21,7 +21,7 @@ int main(int argc,char**argv) {
     
     ros::NodeHandle n;
     
-    ros::Subscriber sub = n.subscribe("laser_scan", 1000, laserCallback);
+    ros::Subscriber sub = n.subscribe("/lidar_scan", 1000, laserCallback);
     
     ros::spin();
     
