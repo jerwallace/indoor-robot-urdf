@@ -27,14 +27,17 @@ list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
 add_library(hello_world SHARED src/hello_world.cc)
 target_link_libraries(hello_world ${GAZEBO_LIBRARIES})
 
+add_library(move_object_plugin src/move_object.cc)
+target_link_libraries(move_object_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+
 install(DIRECTORY include/
    DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}
    FILES_MATCHING PATTERN "*.h"
 )
 
-install(DIRECTORY launch world
+install(DIRECTORY launch world static_models_w_plugin
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
-install(TARGETS hello_world
+install(TARGETS hello_world move_object_plugin
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
